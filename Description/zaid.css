@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #388e3c;
+  --background-color: #f0f2f5;
+  --text-color: #333;
+  --light-text-color: #ccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Navbar Container */
+.navbar-container {
+  width: 100%;
+  height: 80px;
+  background-color: #2e7d32;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Navbar Wrapper */
+.wrapper {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+/* Logo */
+.logo img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Navbar Menu */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: white; /* default white */
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for all links */
+.navbar li a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffeb3b; /* yellow */
+}
+
+/* Home (active link) - stays white by default */
+.navbar li a.active {
+  color: white;
+  font-weight: bold;
+}
+
+/* Home (active) hover -> turns yellow */
+.navbar li a.active:hover {
+  color: #ffeb3b;
+}
+
+/* Search Box */
+.search {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.search_box {
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+.search_icon {
+  color: #2e7d32;
+  margin-left: 5px;
+}
+
+/* User Profile Icons */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-profile a {
+  font-size: 1.2rem;
+  color: white;
+  transition: color 0.3s;
+}
+
+.user-profile a:hover {
+  color: #ffeb3b;
+}
+
+.kharif1{
+    padding: 10px 20px;
+    background-color: #09760f4e;
+    margin-top: 10px;
+  }
+
+.clickable-photo {
+    text-align: center; /* optional: centers inside parent div */
+    padding: 20px;
+  }
+
+  .clickable-photo a img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+  }
+
+ 
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;      /* allows multiple rows */
+    gap: 20px;            /* space between cards */
+    justify-content: center;
+    padding: 30px;
+  }
+
+  .card {
+    flex: 1 1 calc(33.333% - 20px); /* 3 cards per row */
+    max-width: 400px;               /* optional limit */
+    text-align: center;
+  }
+
+  .card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  .card img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  .caption {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 1000;
+    color: #333;
+  }

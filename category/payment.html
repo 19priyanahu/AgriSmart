@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <link rel="stylesheet" href="payement.css">
+</head>
+<body>
+  
+
+<div class="navbar-container">
+  <div class="wrapper">
+    <header class="header">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="resource image/logo1.jpg" alt="Logo" />
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a href="/mai/inde.html" class="active">
+              <i class="fas fa-home"></i><span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="/Description/description.html">
+              <i class="fas fa-circle-info"></i><span>Description</span>
+            </a>
+          </li>
+          <li>
+            <a href="/SIH Website/expert.html">
+              <i class="fas fa-user"></i><span>Expert</span>
+            </a>
+          </li>
+          <li>
+            <a href="/category/category.html">
+              <i class="fas fa-flask"></i><span>Resources</span>
+            </a>
+          </li>
+          <li>
+            <a href="/environment/environment.html">
+              <i class="fas fa-seedling"></i><span>Environment</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Search -->
+      <div class="search">
+        <input type="text" class="search_box" placeholder="Search" />
+        <i class="fas fa-search search_icon"></i>
+      </div>
+
+      <!-- User Profile Icons -->
+      <div class="user-profile">
+        <a href="#"><i class="fas fa-comment-dots"></i></a>
+        <a href="#"><i class="fas fa-globe"></i></a>
+        <a href="#"><i class="fas fa-user-circle"></i></a>
+      </div>
+    </header>
+  </div>
+</div>
+
+
+  <div class="container">
+    <h1>Payment Options</h1>
+
+    <div class="tabs">
+      <div class="tab active" data-tab="card">Card</div>
+      <div class="tab" data-tab="upi">UPI</div>
+      <div class="tab" data-tab="netbanking">Net Banking</div>
+      <div class="tab" data-tab="cod">Cash on Delivery</div>
+    </div>
+
+    <!-- Card Payment -->
+    <div class="tab-content active" id="card">
+      <form>
+        <label for="cardname">Cardholder Name</label>
+        <input type="text" id="cardname" placeholder="John Doe" required>
+
+        <label for="cardnumber">Card Number</label>
+        <input type="text" id="cardnumber" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+
+        <label for="expiry">Expiry Date</label>
+        <input type="month" id="expiry" required>
+
+        <label for="cvv">CVV</label>
+        <input type="password" id="cvv" placeholder="XXX" required>
+
+        <button type="submit">Pay Now</button>
+      </form>
+    </div>
+
+    <!-- UPI Payment -->
+    <div class="tab-content" id="upi">
+      <form>
+        <label for="upiid">Enter UPI ID</label>
+        <input type="text" id="upiid" placeholder="example@upi" required>
+        <button type="submit">Pay via UPI</button>
+      </form>
+    </div>
+
+    <!-- Net Banking -->
+    <div class="tab-content" id="netbanking">
+      <form>
+        <label for="bank">Select Bank</label>
+        <select id="bank" required>
+          <option value="">--Select Bank--</option>
+          <option>State Bank of India</option>
+          <option>HDFC Bank</option>
+          <option>ICICI Bank</option>
+          <option>Axis Bank</option>
+          <option>Punjab National Bank</option>
+        </select>
+        <button type="submit">Pay via Net Banking</button>
+      </form>
+    </div>
+
+    <!-- Cash on Delivery -->
+    <div class="tab-content" id="cod">
+      <p>Pay with cash when your order is delivered. Please ensure you have the exact amount ready.</p>
+      <button>Confirm COD</button>
+    </div>
+  </div>
+
+  <script>
+    // Tab switching logic
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        contents.forEach(content => content.classList.remove('active'));
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

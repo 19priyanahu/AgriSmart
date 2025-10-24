@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Page</title>
+<link rel="stylesheet" href="dummy.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  
+
+<div class="navbar-container">
+  <div class="wrapper">
+    <header class="header">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="resource image/logo1.jpg" alt="Logo" />
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a href="/mai/inde.html" class="active">
+              <i class="fas fa-home"></i><span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="/Description/description.html">
+              <i class="fas fa-circle-info"></i><span>Description</span>
+            </a>
+          </li>
+          <li>
+            <a href="/SIH Website/expert.html">
+              <i class="fas fa-user"></i><span>Expert</span>
+            </a>
+          </li>
+          <li>
+            <a href="/category/category.html">
+              <i class="fas fa-flask"></i><span>Resources</span>
+            </a>
+          </li>
+          <li>
+            <a href="/environment/environment.html">
+              <i class="fas fa-seedling"></i><span>Environment</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Search -->
+      <div class="search">
+        <input type="text" class="search_box" placeholder="Search" />
+        <i class="fas fa-search search_icon"></i>
+      </div>
+
+      <!-- User Profile Icons -->
+      <div class="user-profile">
+        <a href="#"><i class="fas fa-comment-dots"></i></a>
+        <a href="#"><i class="fas fa-globe"></i></a>
+        <a href="#"><i class="fas fa-user-circle"></i></a>
+      </div>
+    </header>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1>Your Order</h1>
+
+  <!-- Products to add -->
+  <div class="product-list">
+    <div class="product-card">
+      <img src="resource image/grass cutter.jpg" alt="Grass Cutter">
+      <h3>Grass Cutter</h3>
+      <p>Price: ₹2000</p>
+      <button onclick="addToCart('Grass Cutter', 2000)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="resource image/plough1.jpg" alt="Plough">
+      <h3>Plough</h3>
+      <p>Price: ₹3500</p>
+      <button onclick="addToCart('Plough', 3500)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="resource image/sprinker.jpg" alt="Sprayer">
+      <h3>Sprayer</h3>
+      <p>Price: ₹1200</p>
+      <button onclick="addToCart('Sprayer', 1200)">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Cart Table -->
+  <table id="cart-table">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price (₹)</th>
+        <th>Quantity</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Cart items appear here -->
+    </tbody>
+  </table>
+
+  <div class="total">
+    Total Amount: ₹<span id="total-amount">0</span>
+  </div>
+
+  <!-- Cart Actions -->
+  <div class="cart-actions">
+    <button onclick="checkout()">Checkout</button>
+    <button onclick="clearCart()">Clear Cart</button>
+    <button class="payment-btn" onclick="goToPayment()">Proceed to Payment</button>
+  </div>
+</div>
+
+<script>
+  let cart = [];
+
+  function addToCart(name, price) {
+    let existing = cart.find(item => item.name === name);
+    if(existing) {
+      existing.qty++;
+    } else {
+      cart.push({name, price, qty: 1});
+    }
+    renderCart();
+  }
+
+  function removeFromCart(name) {
+    cart = cart.filter(item => item.name !== name);
+    renderCart();
+  }
+
+  function updateQty(name, qty) {
+    let item = cart.find(i => i.name === name);
+    if(item) {
+      item.qty = parseInt(qty);
+    }
+    renderCart();
+  }
+
+  function renderCart() {
+    const tbody = document.querySelector("#cart-table tbody");
+    tbody.innerHTML = "";
+    let total = 0;
+
+    cart.forEach(item => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${item.name}</td>
+        <td>${item.price}</td>
+        <td>
+          <input type="number" min="1" value="${item.qty}" onchange="updateQty('${item.name}', this.value)">
+        </td>
+        <td><button onclick="removeFromCart('${item.name}')">Remove</button></td>
+      `;
+      tbody.appendChild(tr);
+      total += item.price * item.qty;
+    });
+
+    document.getElementById("total-amount").innerText = total;
+  }
+
+  function clearCart() {
+    cart = [];
+    renderCart();
+  }
+
+  function checkout() {
+    if(cart.length === 0) {
+      alert("Your cart is empty!");
+    } else {
+      alert("Order placed successfully!\nTotal: ₹" + document.getElementById("total-amount").innerText);
+      cart = [];
+      renderCart();
+    }
+  }
+
+  function goToPayment() {
+    if(cart.length === 0) {
+      alert("Your cart is empty! Add products before proceeding to payment.");
+    } else {
+      window.location.href = "payment.html"; // Navigate to payment page
+    }
+  }
+</script>
+</body>
+</html>

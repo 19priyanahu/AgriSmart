@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #388e3c;
+  --background-color: #f0f2f5;
+  --text-color: #333;
+  --light-text-color: #ccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Navbar Container */
+.navbar-container {
+  width: 100%;
+  height: 80px;
+  background-color: #2e7d32;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Navbar Wrapper */
+.wrapper {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+/* Logo */
+.logo img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Navbar Menu */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: white; /* default white */
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for all links */
+.navbar li a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffeb3b; /* yellow */
+}
+
+/* Home (active link) - stays white by default */
+.navbar li a.active {
+  color: white;
+  font-weight: bold;
+}
+
+/* Home (active) hover -> turns yellow */
+.navbar li a.active:hover {
+  color: #ffeb3b;
+}
+
+/* Search Box */
+.search {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.search_box {
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+.search_icon {
+  color: #2e7d32;
+  margin-left: 5px;
+}
+
+/* User Profile Icons */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-profile a {
+  font-size: 1.2rem;
+  color: white;
+  transition: color 0.3s;
+}
+
+.user-profile a:hover {
+  color: #ffeb3b;
+}
+
+
+.container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      
+    }
+    .blurred-image {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      /* filter: blur(2px); */
+    }
+    .text-overlay {
+      position: absolute;
+      top: 2%; /* adjust vertical placement */
+      width: 100%;
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 5px black;
+      font-family: Arial, sans-serif;
+    }
+    .text-overlay h1 {
+      font-size: 60px;
+      margin: 0;
+    }
+    .text-overlay p {
+      font-size: 30px;
+      margin: 10px 10px 10;
+      color: #ffeb3b; /* yellow tagline */
+    }
+
+   .box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: -160px;
+  gap: 20px;
+  padding: 80px;
+}
+
+.box > div {
+  flex: 1 1 300px; /* flexible, minimum 300px width */
+  max-width: 400px;
+  border: 2px solid black;
+  background-color: #51b356;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.box i {
+  font-size: 50px;
+  color: white;
+  border: 2px solid black;
+  background-color: rgb(237, 140, 76);
+  padding: 10px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.box h1 {
+  margin: 10px 0;
+  font-size: 24px;
+  color: #fff;
+}
+
+.box p {
+  font-size: 16px;
+  color: #f0f0f0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .box {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footers h1{
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+.footers p {
+  color: white;
+}
+
+.footers ul {
+  color: white;
+}
+.footers{
+    margin-top: -30px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.733);
+    padding: 5px 5px;
+}

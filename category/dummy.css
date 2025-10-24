@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #388e3c;
+  --background-color: #f0f2f5;
+  --text-color: #333;
+  --light-text-color: #ccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Navbar Container */
+.navbar-container {
+  width: 100%;
+  height: 80px;
+  background-color: #2e7d32;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Navbar Wrapper */
+.wrapper {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+/* Logo */
+.logo img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Navbar Menu */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: white; /* default white */
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for all links */
+.navbar li a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffeb3b; /* yellow */
+}
+
+/* Home (active link) - stays white by default */
+.navbar li a.active {
+  color: white;
+  font-weight: bold;
+}
+
+/* Home (active) hover -> turns yellow */
+.navbar li a.active:hover {
+  color: #ffeb3b;
+}
+
+/* Search Box */
+.search {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.search_box {
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+.search_icon {
+  color: #2e7d32;
+  margin-left: 5px;
+}
+
+/* User Profile Icons */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-profile a {
+  font-size: 1.2rem;
+  color: white;
+  transition: color 0.3s;
+}
+
+.user-profile a:hover {
+  color: #ffeb3b;
+}
+
+  .container {
+    max-width: 1000px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+
+  h1 {
+    text-align: center;
+    color: #2d572c;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+
+  table th {
+    background: #2d572c;
+    color: #fff;
+  }
+
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .product-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .product-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .product-card button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #2d572c;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .product-card button:hover {
+    background: #1f3d1d;
+  }
+
+  .total {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .cart-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .cart-actions button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #ffcc00;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+
+  .cart-actions button:hover {
+    background: #e6b800;
+  }
+
+  .cart-actions .payment-btn {
+    background: #2d572c;
+    color: #fff;
+  }
+
+  .cart-actions .payment-btn:hover {
+    background: #1f3d1d;
+  }

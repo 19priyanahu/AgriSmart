@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #388e3c;
+  --background-color: #f0f2f5;
+  --text-color: #333;
+  --light-text-color: #ccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Navbar Container */
+.navbar-container {
+  width: 100%;
+  height: 80px;
+  background-color: #2e7d32;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Navbar Wrapper */
+.wrapper {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+/* Logo */
+.logo img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Navbar Menu */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: white; /* default white */
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for all links */
+.navbar li a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffeb3b; /* yellow */
+}
+
+/* Home (active link) - stays white by default */
+.navbar li a.active {
+  color: white;
+  font-weight: bold;
+}
+
+/* Home (active) hover -> turns yellow */
+.navbar li a.active:hover {
+  color: #ffeb3b;
+}
+
+/* Search Box */
+.search {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.search_box {
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+.search_icon {
+  color: #2e7d32;
+  margin-left: 5px;
+}
+
+/* User Profile Icons */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-profile a {
+  font-size: 1.2rem;
+  color: white;
+  transition: color 0.3s;
+}
+
+.user-profile a:hover {
+  color: #ffeb3b;
+}
+
+ .container {
+     max-width: 900px;
+     margin: 30px auto;
+     background: #fff;
+     border-radius: 10px;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+     padding: 20px;
+ }
+
+ .product-image {
+     text-align: center;
+     margin-bottom: 20px;
+ }
+
+ .product-image img {
+     max-width: 100%;
+     border-radius: 10px;
+     height: auto;
+ }
+
+ h1 {
+     font-size: 28px;
+     margin-bottom: 10px;
+     text-align: center;
+     color: #2d572c;
+ }
+
+ .details {
+     margin: 20px 0;
+     line-height: 1.6;
+ }
+
+ .details h2 {
+     font-size: 20px;
+     margin-bottom: 8px;
+     color: #444;
+ }
+
+ .details ul {
+     list-style-type: disc;
+     margin: 0;
+     padding-left: 20px;
+ }
+
+ .buy-btn {
+     display: inline-block;
+     padding: 12px 20px;
+     background: #2d572c;
+     color: #fff;
+     border-radius: 6px;
+     text-decoration: none;
+     font-weight: bold;
+     margin-top: 20px;
+     transition: background 0.3s;
+ }
+
+ .buy-btn:hover {
+     background: #1f3d1d;
+ }
+
+ .back-btn {
+     display: inline-block;
+     margin-top: 15px;
+     text-decoration: none;
+     color: #2d572c;
+     font-weight: bold;
+ }

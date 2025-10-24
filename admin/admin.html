@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agrismart - Admin Message Center</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="navbar-container">
+    <div class="wrapper header">
+      
+      <!-- Logo -->
+      <div class="logo">
+        <img src="logo1.jpg" alt="Logo">
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search">
+        <input type="text" class="search_box" placeholder="Search...">
+        <i class="fas fa-search search_icon"></i>
+      </div>
+
+      <!-- Multilingual Dropdown -->
+      <div class="language-select">
+        <select>
+          <option value="en">English</option>
+          <option value="hi">हिंदी</option>
+          <option value="pa">ਪੰਜਾਬੀ</option>
+        </select>
+      </div>
+
+      <!-- Profile -->
+      <div class="user-profile">
+        <a href="#"><i class="fas fa-user-circle"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h2>Admin Message Center</h2>
+    <div class="main-flex">
+      <!-- Message Table -->
+      <table>
+        <tr>
+          <th>From</th>
+          <th>Subject</th>
+          <th>Date</th>
+        </tr>
+        <tr>
+          <td>Farmer John</td>
+          <td>Help with pest control</td>
+          <td>2024-10-25</td>
+        </tr>
+        <tr>
+          <td>System Alert</td>
+          <td>New update available</td>
+          <td>2024-10-24</td>
+        </tr>
+        <tr>
+          <td>System Alert</td>
+          <td>Soil testing queries</td>
+          <td>2024-10-23</td>
+        </tr>
+        <tr>
+          <td>Expert Sarah</td>
+          <td>Soil testing queries</td>
+          <td>2024-10-23</td>
+        </tr>
+      </table>
+
+      <!-- Compose Message -->
+      <div class="compose">
+        <h3>Compose New Message</h3>
+        <input type="text" placeholder="Recipient">
+        <input type="text" placeholder="Subject">
+        <textarea rows="5" placeholder="Message Body"></textarea>
+        <button>Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Toggle mobile menu
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

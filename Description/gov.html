@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Punjab Farmer Schemes</title>
+  <link rel="stylesheet" href="gov.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  
+
+<div class="navbar-container">
+  <div class="wrapper">
+    <header class="header">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="image1/logo1.jpg" alt="Logo" />
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a href="/mai/inde.html" class="active">
+              <i class="fas fa-home"></i><span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="/Description/description.html">
+              <i class="fas fa-circle-info"></i><span>Description</span>
+            </a>
+          </li>
+          <li>
+            <a href="/SIH Website/expert.html">
+              <i class="fas fa-user"></i><span>Expert</span>
+            </a>
+          </li>
+          <li>
+            <a href="/category/category.html">
+              <i class="fas fa-flask"></i><span>Resources</span>
+            </a>
+          </li>
+          <li>
+            <a href="/environment/environment.html">
+              <i class="fas fa-seedling"></i><span>Environment</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Search -->
+      <div class="search">
+        <input type="text" class="search_box" placeholder="Search" />
+        <i class="fas fa-search search_icon"></i>
+      </div>
+
+      <!-- User Profile Icons -->
+      <div class="user-profile">
+        <a href="#"><i class="fas fa-comment-dots"></i></a>
+        <a href="#"><i class="fas fa-globe"></i></a>
+        <a href="#"><i class="fas fa-user-circle"></i></a>
+      </div>
+    </header>
+  </div>
+</div>
+
+
+  <!-- Schemes -->
+  <div class="container">
+    <h1>🌾 Government Schemes for Punjab Farmers</h1>
+
+    <div class="scheme">
+      <h2>1. Farm Mechanisation Scheme (SMAM)</h2>
+      <div class="scheme-content">
+        <p><b>What it is:</b> Subsidy for modern agricultural machines to make farming efficient.</p>
+        <ul>
+          <li>40% subsidy for general farmers</li>
+          <li>50% subsidy for women, SC/ST & small farmers</li>
+          <li>Covers machines like Potato Planter, Seed Drill, Sprayers, Harvesters</li>
+        </ul>
+        <p><b>Apply here:</b> <a href="https://agrimachinerypb.com" target="_blank">Agrimachinery Punjab</a></p>
+      </div>
+    </div>
+
+    <div class="scheme">
+      <h2>2. PHASE – Punjab Horticulture Advancement and Sustainable Entrepreneurship</h2>
+      <div class="scheme-content">
+        <p><b>What it is:</b> Encourages farmers to grow fruits, vegetables, and flowers.</p>
+        <ul>
+          <li>₹10,000 per acre for new orchards with drip irrigation</li>
+          <li>Support for exotic vegetables & flowers</li>
+          <li>Subsidy for poly-houses & net-houses</li>
+        </ul>
+        <p><b>Apply here:</b> <a href="http://horticulture.punjab.gov.in" target="_blank">Punjab Horticulture
+            Department</a></p>
+      </div>
+    </div>
+
+    <div class="scheme">
+      <h2>3. Paddy-to-Maize Diversification Incentive</h2>
+      <div class="scheme-content">
+        <p><b>What it is:</b> Helps farmers switch from paddy to maize to save groundwater.</p>
+        <ul>
+          <li>₹17,500 per hectare financial support</li>
+          <li>Guidance from agri-experts</li>
+          <li>Improves soil health and reduces water use</li>
+        </ul>
+        <p><b>Apply here:</b> <a href="https://agripb.gov.in" target="_blank">Punjab Agriculture Dept</a></p>
+      </div>
+    </div>
+
+    <div class="scheme">
+      <h2>4. Agriculture Infrastructure Fund (AIF)</h2>
+      <div class="scheme-content">
+        <p><b>What it is:</b> Financial support for storage, cold chains, and processing units.</p>
+        <ul>
+          <li>₹7,050 crore allocated for Punjab</li>
+          <li>Low-interest loans for infrastructure projects</li>
+        </ul>
+        <p><b>Apply here:</b> <a href="https://agriinfra.dac.gov.in" target="_blank">Agri Infra Fund Portal</a></p>
+      </div>
+    </div>
+
+    <div class="scheme">
+      <h2>5. Custom Hiring Centres (CHCs)</h2>
+      <div class="scheme-content">
+        <p><b>What it is:</b> Farmers can rent modern machines at low cost.</p>
+        <ul>
+          <li>40% subsidy for general farmers</li>
+          <li>50% subsidy for SC/ST, women & small farmers</li>
+        </ul>
+        <p><b>Apply here:</b> <a href="https://agrimachinerypb.com" target="_blank">Agrimachinery Punjab</a></p>
+      </div>
+    </div>
+
+    <div class="scheme">
+      <h2>6. Crop Insurance (PMFBY)</h2>
+      <div class="scheme-content">
+        <p><b>What it is:</b> Insurance against crop loss from floods, droughts, pests.</p>
+        <ul>
+          <li>Premium: 2% for Kharif, 1.5% for Rabi crops</li>
+          <li>Government pays remaining cost</li>
+          <li>Compensation for crop loss</li>
+        </ul>
+        <p><b>Apply here:</b> <a href="https://pmfby.gov.in" target="_blank">PMFBY official site</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Toggle scheme content
+    document.querySelectorAll('.scheme h2').forEach(item => {
+      item.addEventListener('click', () => {
+        const parent = item.parentElement;
+        parent.classList.toggle('active');
+        const content = parent.querySelector('.scheme-content');
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+
+</html>
